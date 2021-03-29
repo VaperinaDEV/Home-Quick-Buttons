@@ -20,6 +20,7 @@
 
 .card .card_image {
   display: flex;
+  flex-flow: column;
   align-items: center;
   background: var(--secondary, $secondary);
   border-radius: 8px;
@@ -37,9 +38,9 @@
 }
 
 .card_image::after {
-  font-size: $font-down-5;
+  font-size: $font-0;
   font-family: var(--font-family);
-  display: flex;
+  font-weight: 600;
   margin: 5px auto -5px auto;
   white-space: nowrap;
 }
@@ -52,7 +53,7 @@
   content: 'Tudástér';
 }
 
-.liver-home .card_image::after {
+.live-home .card_image::after {
   content: 'Vaperina Live';
 }
 
