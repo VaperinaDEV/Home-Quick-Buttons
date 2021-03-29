@@ -21,15 +21,13 @@
 .card .card_image {
   display: flex;
   flex-flow: column;
-  align-items: center;
   background: var(--secondary, $secondary);
   border-radius: 8px;
   padding: 0.5em 2.5em;
   .svg-icon {
-    font-size: $font-up-5;
+    font-size: $font-up-6;
     color: var(--tertiary, $tertiary);
     margin: auto;
-    text-align: center;
   }
 }
 
