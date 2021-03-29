@@ -1,0 +1,11 @@
+.custom-homepage-wrapper {
+    margin: 5px auto;
+}
+
+.cards-list {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.cards-list::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,69 @@
+.custom-homepage {
+  margin: 0 auto;
+  max-width: 100%;
+  #main-outlet {
+    padding-top: 0;
+   }
+}
+
+.cards-list {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.card .card_image {
+  display: flex;
+  align-items: center;
+  background: var(--secondary, $secondary);
+  border-radius: 8px;
+  padding: 0.5em 2.5em;
+  .fas {
+    font-size: $font-up-5;
+    color: var(--tertiary, $tertiary);
+    margin: 5px auto;
+    text-align: center;
+  }
+}
+
+.card .card_image:hover {
+  background: var(--vaperina-btn);
+}
+
+.ico-title-home::after {
+  font-size: $font-down-5;
+  font-family: var(--font-family);
+  display: flex;
+  margin: 5px auto -5px auto;
+  white-space: nowrap;
+}
+
+.tudaster-title::after {
+  content: 'Tudástér';
+}
+
+.videotar-title::after {
+  content: 'Videótár';
+}
+
+.live-title::after {
+  content: 'Vaperina Live';
+}
+
+.csoport-title::after {
+  content: 'Csoportok';
+}
+
+.vapediy-title::after {
+  content: 'VapeDIY';
+}
+
+.lokator-title::after {
+  content: 'Vaper Lokátor';
+}

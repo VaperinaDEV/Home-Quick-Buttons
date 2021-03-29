@@ -1,0 +1,14 @@
+.custom-homepage-wrapper {
+    margin: 5px auto 15px auto;
+}
+
+.cards-list::-webkit-scrollbar {
+  -webkit-appearance: none;
+  height: 5px;
+}
+
+.cards-list::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: var(--tertiary);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
