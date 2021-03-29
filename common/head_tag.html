@@ -1,4 +1,6 @@
 <script type="text/discourse-plugin" version="0.8">
+const { iconHTML } = require("discourse-common/lib/icon-library");
+
   // This is the plugin outlet, followed by a custom name for the component
   api.registerConnectorClass("below-site-header", "custom-homepage", {
 
@@ -45,42 +47,42 @@
 	        <a href="/docs">
 	        <div class="card tudastar-home">
 	            <div class="card_image">
-	                <i class="fas fa-lightbulb ico-title-home tudaster-title"></i>
+	                {{d-icon 'lightbulb'}}
 	            </div>
 	        </div>
 	        </a>
 	        <a href="/pub/videotar" target="_blank">
 	        <div class="card videotar-home">
 	            <div class="card_image">
-		            <i class="fas fa-video ico-title-home videotar-title"></i>
+		            {{d-icon 'video'}}
 		        </div>
 	        </div>
 	        </a>
             <a href="/c/vaperina-live/57">
 	        <div class="card live-home">
 	            <div class="card_image">
-	                <i class="fas fa-podcast ico-title-home live-title"></i>
+	                {{d-icon 'podcast'}}
 	            </div>
 	        </div>
 	        </a>
 	        <a href="/g?type=public">
 	        <div class="card group-home">
 	            <div class="card_image">
-		            <i class="fas fa-users ico-title-home csoport-title"></i>
-		        </div>
+		       {{d-icon 'users'}}
+		    </div>
 	        </div>
 	        </a>
 	        <a href="https://diy.vaperina.cc" target="_blank">
 	        <div class="card vapediy-home">
 	            <div class="card_image">
-		            <i class="fas fa-flask ico-title-home vapediy-title"></i>
+		            {{d-icon 'flask'}}
 	            </div>
 	        </div>
 	        </a>
 	        <a href="/u/user-map?period=location">
 	        <div class="card lokator-home">
 	            <div class="card_image">
-		            <i class="fas fa-compass ico-title-home lokator-title"></i>
+		            {{d-icon 'compass'}}
 		        </div>
 	        </div>
 	        </a>
