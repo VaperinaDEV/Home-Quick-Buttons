@@ -36,7 +36,7 @@
   background: var(--vaperina-btn);
 }
 
-.card_image .svg-icon::after {
+.card_image::after {
   font-size: $font-down-5;
   font-family: var(--font-family);
   display: flex;
@@ -44,23 +44,26 @@
   white-space: nowrap;
 }
 
-.card_image {
-  .d-icon-lightbulb::after {
-    content: 'Tudástér';
-  }
-  .d-icon-video::after {
-    content: 'Vidótár';
-  }
-  .d-icon-podcast::after {
-    content: 'Vaperina Live';
-  }
-  .d-icon-users::after {
-    content: 'Csoportok';
-  }
-  .d-icon-flask::after {
-    content: 'VapeDIY';
-  }
-  .d-icon-compass::after {
-    content: 'Vaper Lokátor';
-  }
+.tudastar-home .card_image::after {
+  content: 'Tudástér';
+}
+
+.videotar-home .card_image::after {
+  content: 'Tudástér';
+}
+
+.liver-home .card_image::after {
+  content: 'Vaperina Live';
+}
+
+.group-home .card_image::after {
+  content: 'Csoportok';
+}
+
+.vapediy-home .card_image::after {
+  content: 'VapeDIY';
+}
+
+.lokator-home .card_image::after {
+  content: 'Vaper Lokátor';
 }
