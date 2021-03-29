@@ -1,0 +1,4 @@
+svg_icons: 
+  default: 'lightbulb|video|podcast|users|flask|compass'
+  type: 'list'
+  list_type: 'compact'
