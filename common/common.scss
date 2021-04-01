@@ -16,31 +16,28 @@
 .card {
   margin: 5px;
   cursor: pointer;
-}
-
-.card .card_image {
-  display: flex;
-  flex-flow: column;
-  background: var(--vaperina-secondary);
-  border-radius: 8px;
-  padding: 0.5em 2.5em;
-  .svg-icon {
-    font-size: $font-up-6;
-    color: var(--tertiary, $tertiary);
-    margin: auto;
-  }
-}
-
-.card .card_image:hover {
-  background: var(--vaperina-btn);
-}
-
-.card_image::after {
-  font-size: $font-0;
-  font-family: var(--font-family);
-  font-weight: 600;
-  margin: 5px auto -5px auto;
-  white-space: nowrap;
+  .card_image {
+    display: flex;
+    flex-flow: column;
+    background: var(--vaperina-secondary);
+    border-radius: 8px;
+    padding: 0.5em 2.5em;
+    .svg-icon {
+      font-size: $font-up-6;
+      color: var(--tertiary, $tertiary);
+      margin: auto;
+    }
+    &:hover {
+      background: var(--vaperina-btn);
+    }
+    &:after {
+      font-size: $font-0;
+      font-family: var(--font-family);
+      font-weight: 600;
+      margin: 5px auto -5px auto;
+      white-space: nowrap;
+    }
+  }  
 }
 
 .tudastar-home .card_image::after {
