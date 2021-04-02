@@ -1,26 +1,20 @@
 <script type="text/discourse-plugin" version="0.8">
-const { iconHTML } = require("discourse-common/lib/icon-library");
-
+  const { iconHTML } = require("discourse-common/lib/icon-library");
   // This is the plugin outlet, followed by a custom name for the component
   api.registerConnectorClass("below-site-header", "custom-homepage", {
-
     // Setting up our component
     setupComponent(args, component) {
-
      // Next we're getting the site setting 'top_menu',
      // splitting the values into an array,
      // and adding a leading slash
      var topMenuRoutes = 
-        Discourse.SiteSettings.top_menu.split('|')
+         Discourse.SiteSettings.top_menu.split('|')
         .map(function(route) {return '/' + route});
-      
      // The first page listed in the 'top_menu' setting is your homepage
      // lets assign it to a variable
      var homeRoute = topMenuRoutes[0];
-  
      // This calls our code whenever the page changes
      api.onPageChange((url) => {
-
         // Check if we're on the homepage 
         if (url === "/" || url === homeRoute ){ 
           // If it's the homepage add the 'custom-homepage' class to HTML tag
@@ -35,58 +29,56 @@ const { iconHTML } = require("discourse-common/lib/icon-library");
         }
       });
     }
-    
   });
-
 </script>
 
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/custom-homepage">
-  {{#if displayCustomHomepage}} 
+{{#if displayCustomHomepage}} 
     <div class="custom-homepage-wrapper wrap">
         <div class="cards-list">
-	        <a href="/docs">
-	        <div class="card tudastar-home">
-	            <div class="card_image">
-	                {{d-icon 'lightbulb'}}
-	            </div>
-	        </div>
-	        </a>
-	        <a href="/pub/videotar" target="_blank">
-	        <div class="card videotar-home">
-	            <div class="card_image">
-		            {{d-icon 'video'}}
-		        </div>
-	        </div>
-	        </a>
+            <a href="/docs">
+                <div class="card tudastar-home">
+                    <div class="card_image">
+                        {{d-icon 'lightbulb'}}
+                    </div>
+                </div>
+            </a>
+            <a href="/pub/videotar" target="_blank">
+                <div class="card videotar-home">
+                    <div class="card_image">
+                        {{d-icon 'video'}}
+                    </div>
+                </div>
+            </a>
             <a href="/c/vaperina-live/57">
-	        <div class="card live-home">
-	            <div class="card_image">
-	                {{d-icon 'podcast'}}
-	            </div>
-	        </div>
-	        </a>
-	        <a href="/g?type=public">
-	        <div class="card group-home">
-	            <div class="card_image">
-		       {{d-icon 'users'}}
-		    </div>
-	        </div>
-	        </a>
-	        <a href="https://diy.vaperina.cc" target="_blank">
-	        <div class="card vapediy-home">
-	            <div class="card_image">
-		            {{d-icon 'flask'}}
-	            </div>
-	        </div>
-	        </a>
-	        <a href="/u/user-map?period=location">
-	        <div class="card lokator-home">
-	            <div class="card_image">
-		            {{d-icon 'compass'}}
-		        </div>
-	        </div>
-	        </a>
-	    </div>
+                <div class="card live-home">
+                    <div class="card_image">
+                        {{d-icon 'podcast'}}
+                    </div>
+                </div>
+            </a>
+            <a href="/g?type=public">
+                <div class="card group-home">
+                    <div class="card_image">
+                        {{d-icon 'users'}}
+                    </div>
+                </div>
+            </a>
+            <a href="https://diy.vaperina.cc" target="_blank">
+                <div class="card vapediy-home">
+                    <div class="card_image">
+                        {{d-icon 'flask'}}
+                    </div>
+                </div>
+            </a>
+            <a href="/u/user-map?period=location">
+                <div class="card lokator-home">
+                    <div class="card_image">
+                        {{d-icon 'compass'}}
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
-  {{/if}}
+{{/if}}
 </script>
