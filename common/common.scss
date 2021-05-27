@@ -27,7 +27,8 @@
       color: var(--tertiary);
       margin: auto;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       background: var(--vaperina-btn);
     }
     &:after {
