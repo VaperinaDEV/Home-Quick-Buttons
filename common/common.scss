@@ -16,9 +16,6 @@
 .card {
   margin: 5px;
   cursor: pointer;
-  &:focus {
-    background: var(--vaperina-btn);
-  }
   .card_image {
     display: flex;
     flex-flow: column;
